@@ -52,9 +52,9 @@ ctrl + c 终止并打印出接收到的连接数
 
 1. 系统最好是 linux 修改(添加)系统内核参数:/etc/sysctl.conf （避免大量timewait）
 
-	net.ipv4.tcp_fin_timeout=2
-	net.ipv4.tcp_tw_reuse=1
-	net.ipv4.tcp_tw_recycle=1
+    net.ipv4.tcp_fin_timeout=2
+    net.ipv4.tcp_tw_reuse=1
+    net.ipv4.tcp_tw_recycle=1
 
 2. 编译evserver需要安装libevent-dev
 
