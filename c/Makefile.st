@@ -1,0 +1,2 @@
+evserver : evserver.c transdata.h
+	gcc  -o evserver evserver.c  /usr/local/lib/libevent.a  /usr/local/lib/libevent_core.a  /usr/local/lib/libevent_extra.a /usr/local/lib/libevent_openssl.a  /usr/local/lib/libevent_pthreads.a -static -fPIC

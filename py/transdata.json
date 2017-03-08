@@ -1,0 +1,9 @@
+{
+    "head": {
+        "head_id": 34969,
+        "data_type": 10101,
+        "data_id": 1
+    },
+    "content": "Hello world!",
+    "codec": "ascii"
+}
