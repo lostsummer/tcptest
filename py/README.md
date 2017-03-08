@@ -1,8 +1,11 @@
 # 文件
 
 uvserver.py            测试服务器
+
 uvcli.py               测试客户端
+
 transdata.py         测试数据协议实现类，被 server.py 和 cli.py 调用
+
 transdata.json       客户端发送数据
 
 # 服务器启动
@@ -35,6 +38,7 @@ ctrl + c 终止并打印出接收到的连接数（windows 上不能终止）
 向 192.168.8.211 888 并发 20 个长连接，持续5秒
 
 发送结束后打印发送数，成功数，总计发送时间
+
 发送成功的逻辑是连接成功并要验证回包包头 head_id（0x99 0x88），data_type （请求类型 + 100），data_len（包长度 - 包头长度）
 
 # 数据包构造 transdata.json
@@ -56,9 +60,11 @@ ctrl + c 终止并打印出接收到的连接数（windows 上不能终止）
 # 测试环境
 
 1. 系统最好是 linux 修改(添加)系统内核参数:/etc/sysctl.conf （避免大量timewait）
-    net.ipv4.tcp_fin_timeout=2
-    net.ipv4.tcp_tw_reuse=1
-    net.ipv4.tcp_tw_recycle=1
+
+		net.ipv4.tcp_fin_timeout=2
+		net.ipv4.tcp_tw_reuse=1
+		net.ipv4.tcp_tw_recycle=1
 
 2. 安装 python3.6
+
    pip install uvloop
